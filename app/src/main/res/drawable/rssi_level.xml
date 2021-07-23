@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 MbientLab Inc. All rights reserved.
+  ~ Author: Eric Tsai
+  -->
+
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="0" android:drawable="@mipmap/rssi_level_0" />
+    <item android:maxLevel="1" android:drawable="@mipmap/rssi_level_1" />
+    <item android:maxLevel="2" android:drawable="@mipmap/rssi_level_2" />
+    <item android:maxLevel="3" android:drawable="@mipmap/rssi_level_3" />
+    <item android:maxLevel="4" android:drawable="@mipmap/rssi_level_4" />
+    <item android:maxLevel="10000" android:drawable="@mipmap/rssi_level_na" />
+</level-list>

@@ -1,0 +1,168 @@
+<!--
+  ~ Copyright 2015 MbientLab Inc. All rights reserved.
+  ~
+  ~ IMPORTANT: Your use of this Software is limited to those specific rights
+  ~ granted under the terms of a software license agreement between the user who
+  ~ downloaded the software, his/her employer (which must be your employer) and
+  ~ MbientLab Inc, (the "License").  You may not use this Software unless you
+  ~ agree to abide by the terms of the License which can be found at
+  ~ www.mbientlab.com/terms . The License limits your use, and you acknowledge,
+  ~ that the  Software may not be modified, copied or distributed and can be used
+  ~ solely and exclusively in conjunction with a MbientLab Inc, product.  Other
+  ~ than for the foregoing purpose, you may not use, reproduce, copy, prepare
+  ~ derivative works of, modify, distribute, perform, display or sell this
+  ~ Software and/or its documentation for any purpose.
+  ~
+  ~ YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+  ~ PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+  ~ INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+  ~ NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+  ~ MBIENTLAB OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT, NEGLIGENCE,
+  ~ STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE
+  ~ THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT LIMITED
+  ~ TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR CONSEQUENTIAL DAMAGES, LOST
+  ~ PROFITS OR LOST DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY,
+  ~ SERVICES, OR ANY CLAIMS BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY
+  ~ DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+  ~
+  ~ Should you have any questions regarding your right to use this Software,
+  ~ contact MbientLab Inc, at www.mbientlab.com.
+  -->
+
+<resources>
+    <string name="action_manual_dfu">DFU From File</string>
+    <string name="action_dfu_version">DFU From Version</string>
+    <string name="action_sleep">Put to Sleep</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_metacloud_logout">Logout MetaCloud</string>
+    <string name="action_skip">Skip</string>
+
+    <string name="action_new_group">+Group</string>
+    <string name="action_new_device">+Device</string>
+
+    <string name="dfu_firmware_path_type">Invalid firmware path type</string>
+
+    <string name="app_name">MetaBase</string>
+    <string name="title_config">Configure</string>
+    <string name="title_error">Error</string>
+    <string name="title_download">Download</string>
+    <string name="title_connecting">Connect</string>
+    <string name="title_success">Success</string>
+    <string name="title_reconnecting">Reconnecting</string>
+    <string name="title_request_permission">Permission Request</string>
+    <string name="title_warning">Warning</string>
+    <string name="title_diagnostic">Diagnostic</string>
+    <string name="title_firmware_update">Firmware Update</string>
+    <string name="title_dfu">Firmware Update</string>
+    <string name="title_device_name">Device Name</string>
+    <string name="title_group_name">Name Group</string>
+    <string name="title_session_name">Name Session</string>
+    <string name="title_syncing">Syncing</string>
+    <string name="title_metacloud_sync">MetaCloud</string>
+    <string name="title_cleanup">Cleanup</string>
+
+    <string name="description_logging">Data logged to MetaWear, download later with any MetaBase app</string>
+    <string name="description_streaming">Data streamed directly to Android device</string>
+    <string name="label_data_collection">Data Collection</string>
+    <string name="label_logging">Logging</string>
+    <string name="label_streaming">Streaming</string>
+    <string name="label_devices">Devices</string>
+    <string name="label_device">Device</string>
+    <string name="label_device_config">Device Config</string>
+    <string name="label_groups">Groups</string>
+    <string name="label_sessions">Sessions</string>
+    <string name="label_add_group">Add Group</string>
+    <string name="label_new_session">New Session</string>
+    <string name="label_progress">Progress</string>
+    <string name="message_connecting">Connecting to device, please wait…</string>
+    <string name="message_connect_retry">Failed to connect to device.  Would you like to try again?</string>
+    <string name="instruction_name_device">Please provide a name for the MetaWear with a blinking green LED.</string>
+    <string name="instruction_name_group">Please provide a name for this MetaWear group.</string>
+    <string name="instruction_name_session">Provide a short name to help you remember the context of this data</string>
+    <string name="error_max_characters">Please limit names to %d English characters</string>
+    <string name="error_empty_name">Cannot use an empty name</string>
+    <string name="error_empty_alphanum">Only characters [A–Za–z0–9- ] are allowed</string>
+    <string name="error_underscore">Underscores (_) are not allowed in the session name</string>
+    <string name="message_data_throughput">Currently selected frequencies exceed 100Hz per device.\n\nPlease disable some sensors or reduce their frequency to have a stable live data stream</string>
+    <string name="message_select_sensor">Please enable at least one sensor</string>
+    <string name="message_sensors_active">The sensors have been configured and are %s data</string>
+    <string name="message_dl_fail">Failed to retrieve logged data from some devices.\n\nPlease make sure they are charged and near your Android device, then try again.</string>
+    <string name="message_reconnect_fail">Failed to reconnect to device after %d tries</string>
+    <string name="message_read_info">Reading device information, please wait…</string>
+    <string name="message_reset_devices">Resetting devices, please wait…</string>
+    <string name="message_connect_fail">Failed to connect to the device</string>
+    <string name="message_loading_sensors">Discovering available sensors, please wait…</string>
+    <string name="error_no_devices">Please select at least 2 devices to group</string>
+    <string name="message_sync_cloud">"Syncing data to MetaCloud, please wait…"</string>
+    <string name="message_tutorial_connection">Could not establish a connection with device.\n\nCheck that the device is nearby and fully charged</string>
+    <string name="message_tutorial_lost_connection">Could not maintain connection with device.\n\nCheck that the device is nearby and fully charged</string>
+    <string name="error_stream_throughput">Currently selected frequencies exceed 125Hz per device.\n\nPlease disable some sensors or reduce their frequency to have a stable live data stream</string>
+    <string name="error_download_fail">Download failed</string>
+    <string name="error_dfu_failed">Firmware update failed\n\n(reason = %s)</string>
+    <string name="error_dfu_cancelled">Firmware update cancelled</string>
+
+    <string name="tutorial_msg_01">Let\'s connect to your MetaSensor.</string>
+    <string name="tutorial_msg_02">Place your MetaSensor here.</string>
+    <string name="tutorial_msg_03">Connecting to your MetaSensor.</string>
+    <string name="tutorial_msg_04">Connected to your MetaSensor.</string>
+    <string name="tutorial_msg_05">Let\'s blink the LED.</string>
+    <string name="tutorial_msg_06">Press the button on the MetaSensor.</string>
+    <string name="tutorial_msg_07">Let\'s stream sensor data live.\n\nShake your device.</string>
+    <string name="tutorial_msg_08">Now you can use your MetaSensor!</string>
+    <string name="label_next">Next</string>
+    <string name="label_blink">Blink</string>
+    <string name="label_done">Done</string>
+
+    <string name="label_later">Later</string>
+    <string name="label_num_samples"># of Samples</string>
+    <string name="label_stop">Stop</string>
+    <string name="label_run_diagnostic">Run Diagnostic</string>
+    <string name="label_update_firmware">Update Firmware</string>
+    <string name="label_file_selector">File Selector</string>
+    <string name="label_version_input">Version</string>
+
+    <string name="message_wait">Please wait</string>
+    <string name="message_config_board">Configuring \'%s\'.  Please wait…</string>
+    <string name="message_ext_storage_permission">MetaBase requires storage permissions in order to save the downloaded data to the public Downloads folder.\n\nYou can view the saved CSV files
+        on your computer by using the USB connection for file transfers.</string>
+    <string name="message_location_permission">In order to perform a bluetooth scan in the background, Android requires the app to have location permissions.</string>
+    <string name="message_dfu">Updating the firmware to the latest version, please wait</string>
+    <string name="message_dfu_type">Select a firmware image through your device\'s file explorer, or enter a specific version to upload.</string>
+
+    <string name="message_manual_dfu">Updating the firmware with the selected file, please wait</string>
+    <string name="message_dfu_input_instruction">Enter the firmware revision you want to upload</string>
+    <string name="message_firmware_available">A new firmware version is available, do you want to update?</string>
+    <string name="message_metaboot">Your device is in MetaBoot mode.  Typically, the board will reset itself back to normal operation after a minute.\n\nIn
+        the case where it is stuck in MetaBoot mode, you can manually return the board to normal by initiating a firmware update.</string>
+    <string name="message_sleep">Board in ultra low power sleep state.\n\nTo wake, you can press the button, reinsert the coin cell battery, or connect to a usb charger</string>
+
+    <string name="sensor_accelerometer">Accelerometer</string>
+    <string name="sensor_ambient_light">Ambient Light</string>
+    <string name="sensor_gyroscope">Gyroscope</string>
+    <string name="sensor_humidity">Humidity</string>
+    <string name="sensor_magnetometer">Magnetometer</string>
+    <string name="sensor_pressure">Pressure</string>
+    <string name="sensor_temperature">Temperature</string>
+    <string name="sensor_quaternion">Quaternion</string>
+    <string name="sensor_euler_angles">Euler Angles</string>
+    <string name="sensor_linear_acc">Linear Acceleration</string>
+    <string name="sensor_gravity">Gravity</string>
+
+    <string name="metacloud_about">MetaCloud is a service offered by MbientLab that saves your sensor data to the cloud and
+        provides a dashboard to interact with the synced data.\n\nUsing this service requires a monthly subscription.</string>
+    <string name="metacloud_sync">Data synced to MetaCloud</string>
+    <string name="error_metacloud_sync_size">MetaCloud does not currently support syncing large data sets.  Please use the other apps provided by Android to save your data (e.g. Drive, Dropbox etc.).</string>
+
+    <string-array name="values_diagnostic">
+        <item>MAC</item>
+        <item>Model</item>
+        <item>Model Number</item>
+        <item>Firmware</item>
+        <item>Hardware</item>
+        <item>Serial Number</item>
+        <item>Manufacturer</item>
+        <item>RSSI</item>
+        <item>Battery</item>
+    </string-array>
+
+</resources>
