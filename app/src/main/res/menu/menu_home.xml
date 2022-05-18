@@ -74,7 +74,7 @@
     </group>
 
     <group android:id="@+id/group_dev_info" android:visible="false">
-        <item android:id="@+id/action_logout_metacloud" android:title="@string/action_metacloud_logout"
-            android:orderInCategory="100" app:showAsAction="never" />
+        <!--item android:id="@+id/action_logout_metacloud" android:title="@string/action_metacloud_logout"
+            android:orderInCategory="100" app:showAsAction="never" /-->
     </group>
 </menu>

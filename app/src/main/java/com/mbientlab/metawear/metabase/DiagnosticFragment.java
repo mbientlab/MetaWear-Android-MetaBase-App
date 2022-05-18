@@ -550,7 +550,7 @@ public class DiagnosticFragment extends AppFragmentBase implements LoaderManager
 
                 dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener(v -> {
                     try {
-                        metawear.downloadFirmwareUpdateFilesAsync(versionInput.getText().toString()).continueWith(task -> {
+                        metawear.downloadFirmwareUpdateFilesAsyncV2(versionInput.getText().toString()).continueWith(task -> {
                             if (task.isFaulted()) {
                                 firmwareTextWrapper.setError(task.getError().getLocalizedMessage());
                                 Log.w("metabase", "Could not update to firmware v" + versionInput.getText(), task.getError());

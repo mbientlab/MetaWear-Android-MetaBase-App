@@ -89,7 +89,8 @@ import static com.mbientlab.metawear.metabase.TutorialActivity.EXTRA_DEVICE;
  * A placeholder fragment containing a simple view.
  */
 public class HomeActivityFragment extends AppFragmentBase {
-    static final int PERMISSION_REQUEST_EXT_STORAGE_WRITE = 0, PERMISSION_REQUEST_COARSE_LOCATION= 2, PERMISSION_REQUEST_FINE_LOCATION= 3;
+    static final int PERMISSION_REQUEST_EXT_STORAGE_WRITE = 0, PERMISSION_REQUEST_COARSE_LOCATION= 2,
+            PERMISSION_REQUEST_FINE_LOCATION= 3, PERMISSION_REQUEST_BLUETOOTH= 4;
     private static final int TUTORIAL= 1;
 
     abstract class SwipeToDelete extends ItemTouchHelper.SimpleCallback {
@@ -298,7 +299,15 @@ public class HomeActivityFragment extends AppFragmentBase {
 
         if (checkPermissionTask == null) {
             permissionTaskSource = new TaskCompletionSource<>();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                if (owner.checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[]{Manifest.permission.BLUETOOTH_CONNECT,
+                            Manifest.permission.BLUETOOTH_SCAN}, PERMISSION_REQUEST_BLUETOOTH);
+                } else {
+                    permissionTaskSource.setResult(null);
+                }
+                checkPermissionTask = permissionTaskSource.getTask();
+            } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 checkPermissionTask = checkRuntimePermission(android.Manifest.permission.ACCESS_FINE_LOCATION, R.string.message_location_permission,
                         dialog -> requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_FINE_LOCATION)
                 );
@@ -634,6 +643,13 @@ public class HomeActivityFragment extends AppFragmentBase {
             case PERMISSION_REQUEST_FINE_LOCATION:
                 if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
                     permissionTaskSource.setError(new RuntimeException("Fine location permission denied"));
+                } else {
+                    permissionTaskSource.setResult(null);
+                }
+                break;
+            case PERMISSION_REQUEST_BLUETOOTH:
+                if (grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                    permissionTaskSource.setError(new RuntimeException("Bluetooth permission denied"));
                 } else {
                     permissionTaskSource.setResult(null);
                 }
