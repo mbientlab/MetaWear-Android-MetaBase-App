@@ -45,8 +45,8 @@ android {
         applicationId "com.mbientlab.metawear.metabase"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 37
-        versionName "3.6.0"
+        versionCode 38
+        versionName "4.0.0"
     }
     buildTypes {
         debug {
@@ -70,8 +70,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     buildToolsVersion '33.0.1'
 }
@@ -80,7 +80,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':function')
     implementation 'com.jjoe64:graphview:4.2.2'
-    implementation 'com.mbientlab:metawear:3.9.0'
+    implementation 'com.mbientlab:metawear:3.9.0' // Go to 4.0.0
     implementation 'no.nordicsemi.android:dfu:2.3.0'
     implementation "androidx.appcompat:appcompat:${rootProject.ext.androidXVersion}"
     implementation 'com.google.android.material:material:1.7.0'
