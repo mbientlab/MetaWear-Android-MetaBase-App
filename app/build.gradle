@@ -70,8 +70,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     buildToolsVersion '33.0.1'
 }
@@ -80,10 +80,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':function')
     implementation 'com.jjoe64:graphview:4.2.2'
-    implementation 'com.mbientlab:metawear:3.9.0' // Go to 4.0.0
+    implementation 'com.mbientlab:metawear:4.0.0'
     implementation 'no.nordicsemi.android:dfu:2.3.0'
     implementation "androidx.appcompat:appcompat:${rootProject.ext.androidXVersion}"
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
