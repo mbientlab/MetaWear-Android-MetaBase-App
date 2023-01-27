@@ -5,4 +5,6 @@ This app is the App you see on the App store for Android to use our MetaWear/Met
 For more information about the MetaWear platform, check out our website at [https://mbientlab.com](https://mbientlab.com).
 
 ## Build ##
-It is targeted for Android 10-13 (SDK 29-33) with Android N (SDK 24) as the minimum required SDK, and requires a JDK compiler compliance level of 11.
+It is targeted for Android 13 (SDK 33) with Android 11 (SDK 30) as the minimum required SDK.
+The App was built with JDK (Java) 17 and the new metawear:4.0.0 dependency (also built on Java 17).
+Builds on Android Studio Eel.
